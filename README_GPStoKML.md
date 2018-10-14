@@ -23,10 +23,6 @@ Users are recommended to have Python 2.7 or above / Spyder 3, Google Earth Pro (
 * NMEA to KML converter (GPStoKML.py) – converts NMEA sentences or other formats of GPS data to KML format 
 * KML data visualization (the output .kml files) – displays the data in tracks on Google Map Pro desktop.
 
-## Screenshots
-
-![This is one of the output KML file displaying on Google Map, showing one of the truck’s movement a day in September 2017.](D:/IFN702/Visualize on Google Map_SBAS06_sept0310.jpg)
-
 ## Contributing
 
 Pull requests and improvement are welcome. :) Please make sure to include commit comments for each change made. 
