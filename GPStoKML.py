@@ -55,7 +55,7 @@ KML_TEMPLATE = \
 KML_EXT = ".kml"
 
 # Read raw file in, one each time
-datafile = open ("D:\IFN702\Data\SBAS_Data.Processing\Trial1\sol\septenrio\SBAS06_NMEA\sept0210.181", "r")
+datafile = open ("D:\IFN702\Data\SBAS_Data.Processing\Trial1\sol\septenrio\SBAS07_NMEA\sept0310.181", "r")
 
 # Gets start point coordinate 
 def getStartPoint(datafile):
@@ -69,18 +69,6 @@ def getStartPoint(datafile):
     
     return string.join (startPoint)
 
-'''
-def getEndPoint(datafile):
-    
-    endPoint = []
-    finalLine = datafile.readlines()[-1]
-    nmeagram.parseLine(finalLine)
-    endPoint.append(str(nmeagram.getField("Longitude")))
-    endPoint.append(",")
-    endPoint.append(str(nmeagram.getField("Latitude")))
-    
-    return string.join (endPoint)
-'''
 
 # Gets the rest of the coordinates (within 8500 volumn)
 def getCoordFirstHalf(datafile):
@@ -128,7 +116,7 @@ def main():
     
 
     if len(sys.argv) == 1:
-        fn = ".\SBAS06_sept0210"
+        fn = ".\SBAS07_sept0310"
         fo = open (fn + KML_EXT, 'w')
         fo.write(KML_TEMPLATE % (fn, getStartPoint(datafile), fn, getCoordFirstHalf(datafile)))
         fo.close()
